@@ -1,0 +1,13 @@
+{
+  "name": "@design-engineer/physics",
+  "version": "1.0.0",
+  "description": "Zero-dependency analytical and RK4 kinetic spring solvers with FLIP layout morphing",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "keywords": ["spring", "physics", "flip", "rk4", "animation", "motion"],
+  "license": "MIT"
+}

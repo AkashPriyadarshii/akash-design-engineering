@@ -1,0 +1,32 @@
+/**
+ * @design-engineer/tokens - OKLCH Pigment Atelier
+ * Non-slop bespoke color formulations with anchor-chroma gray bleeds (chroma >= 0.006).
+ */
+
+:root {
+  /* Bespoke Pigment Palette */
+  --pigment-verdigris: oklch(0.72 0.13 168.4);
+  --pigment-chartreuse: oklch(0.86 0.19 112.5);
+  --pigment-lapis: oklch(0.45 0.24 255.0);
+  --pigment-oxblood: oklch(0.38 0.16 18.5);
+  --pigment-aubergine: oklch(0.28 0.09 308.2);
+  --pigment-phosphor: oklch(0.88 0.26 142.2);
+  --pigment-cinnabar: oklch(0.62 0.22 28.0);
+  --pigment-signal-beam: oklch(0.93 0.08 88.5);
+
+  /* Anchor Hue for Neutrals (Default: 250 deg cool slate) */
+  --anchor-hue: 250;
+  
+  /* Harmonized Neutrals (Chroma >= 0.006 to eliminate dead grays) */
+  --neutral-50:  oklch(0.98 0.008 var(--anchor-hue));
+  --neutral-100: oklch(0.95 0.010 var(--anchor-hue));
+  --neutral-200: oklch(0.88 0.012 var(--anchor-hue));
+  --neutral-300: oklch(0.75 0.014 var(--anchor-hue));
+  --neutral-400: oklch(0.62 0.015 var(--anchor-hue));
+  --neutral-500: oklch(0.48 0.016 var(--anchor-hue));
+  --neutral-600: oklch(0.36 0.014 var(--anchor-hue));
+  --neutral-700: oklch(0.26 0.012 var(--anchor-hue));
+  --neutral-800: oklch(0.18 0.010 var(--anchor-hue));
+  --neutral-900: oklch(0.13 0.008 var(--anchor-hue));
+  --neutral-950: oklch(0.09 0.006 var(--anchor-hue));
+}

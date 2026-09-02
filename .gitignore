@@ -1,0 +1,11 @@
+apps/
+website/
+node_modules/
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+.env
+.DS_Store
+
+ledger.md

@@ -1,0 +1,43 @@
+/**
+ * @design-engineer/tokens - Swiss Modular Subgrid Layout System
+ */
+
+.modular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background-color: var(--border-hairline);
+  border: 1px solid var(--border-hairline);
+}
+
+.modular-cell {
+  background-color: var(--bg-surface);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.modular-cell-header {
+  font-family: monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.modular-cell-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: 0.5rem;
+  text-wrap: balance;
+}
+
+.modular-cell-body {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-wrap: pretty;
+}

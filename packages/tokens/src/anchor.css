@@ -1,0 +1,59 @@
+/**
+ * @design-engineer/tokens - CSS Anchor Positioning Primitives
+ */
+
+/* Menu / Dropdown Anchor Trigger */
+.anchor-trigger {
+  anchor-name: --de-menu-trigger;
+}
+
+/* Tooltip Trigger */
+.tooltip-trigger {
+  anchor-name: --de-tooltip-trigger;
+}
+
+/* Anchored Menu Popover */
+.anchored-menu {
+  position: absolute;
+  position-anchor: --de-menu-trigger;
+  position-area: bottom span-right;
+  position-try-fallbacks: flip-block, @position-try --side-fallback;
+  min-width: anchor-size(--de-menu-trigger width);
+  margin-top: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  z-index: 50;
+  transform-origin: top left;
+  transition: opacity 140ms ease-out, transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@position-try --side-fallback {
+  position-area: right span-bottom;
+  margin-left: 6px;
+}
+
+/* Anchored Instant Tooltip */
+.anchored-tooltip {
+  position: absolute;
+  position-anchor: --de-tooltip-trigger;
+  position-area: top center;
+  position-try-fallbacks: flip-block;
+  margin-bottom: 6px;
+  background: var(--neutral-900);
+  color: var(--neutral-50);
+  font-size: 11px;
+  font-family: monospace;
+  padding: 4px 8px;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 60;
+}
+
+@starting-style {
+  .anchored-menu {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
