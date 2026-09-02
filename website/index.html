@@ -128,7 +128,7 @@
 
         .text-massive {
             font-size: clamp(4rem, 12vw, 15rem);
-            line-height: 0.82;
+            line-height: 0.9;
             letter-spacing: -0.05em;
             text-transform: uppercase;
         }
@@ -150,16 +150,11 @@
             text-indent: -0.5em;
         }
 
-        .bg-cinnabar { background-color: var(--cinnabar); }
-        .text-cinnabar { color: var(--cinnabar); }
-        .border-cinnabar { border-color: var(--cinnabar); }
-        .bg-ink { background-color: var(--ink); }
+        
         
         /* Grid spans for large screens */
         @media (min-width: 1025px) {
-            .col-span-full { grid-column: 1 / 5; }
-            .col-span-3 { grid-column: auto / span 3; }
-            .col-span-2 { grid-column: auto / span 2; }
+            
             .asymmetric-col-1 { grid-column: 1 / 4; }
             .asymmetric-col-2 { grid-column: 3 / 5; }
             .asymmetric-col-3 { grid-column: 2 / 5; }
@@ -184,11 +179,11 @@
 
         .gsap-reveal { 
             opacity: 0; 
+            will-change: transform, opacity; 
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); 
         }
 
-        /* Prevent scrollbar layout shift */
-        ::-webkit-scrollbar { display: none; }
+        
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -244,7 +239,7 @@
                 <h2 class="text-conceptual text-cinnabar">The Manifesto of Akash Priyadarshi</h2>
             </div>
             
-            <div class="col-span-2 md:col-span-1 border-r border-ivory/20 pr-8 gsap-reveal">
+            <div class="col-span-full md:col-span-1 border-r border-ivory/20 pr-8 gsap-reveal">
                 <h3 class="text-4xl font-bold text-ivory mb-6">01</h3>
                 <p class="text-sm uppercase tracking-widest text-cinnabar mb-4 font-mono">The Problem</p>
                 <p class="text-base leading-relaxed opacity-90 text-pretty">
@@ -252,7 +247,7 @@
                 </p>
             </div>
             
-            <div class="col-span-2 md:col-span-1 border-r border-ivory/20 px-0 md:px-8 gsap-reveal">
+            <div class="col-span-full md:col-span-1 border-r border-ivory/20 px-0 md:px-8 gsap-reveal">
                 <h3 class="text-4xl font-bold text-ivory mb-6">02</h3>
                 <p class="text-sm uppercase tracking-widest text-cinnabar mb-4 font-mono">The Antidote</p>
                 <p class="text-base leading-relaxed opacity-90 text-pretty hanging-punctuation">
@@ -260,7 +255,7 @@
                 </p>
             </div>
             
-            <div class="col-span-2 md:col-span-2 pl-0 md:pl-8 gsap-reveal flex flex-col justify-center">
+            <div class="col-span-full md:col-span-2 pl-0 md:pl-8 gsap-reveal flex flex-col justify-center">
                 <blockquote class="text-3xl font-serif italic text-cinnabar leading-snug border-l border-cinnabar pl-8">
                     "A digital monument rooted in ancient soil, favoring tactile stillness over digital noise. We build systems that crush predictability." <br>
                     <span class="block mt-4 text-sm font-sans font-bold not-italic text-ivory uppercase">— Akash Priyadarshi</span>
@@ -446,11 +441,11 @@
     </main>
 
     <footer class="swiss-grid border-t-8 border-cinnabar pt-16 pb-24">
-        <div class="col-span-4 md:col-span-1 mb-12 md:mb-0">
+        <div class="col-span-full md:col-span-1 mb-12 md:mb-0">
             <h2 class="text-2xl font-bold uppercase mb-2">akash-design-engineering</h2>
             <p class="text-sm text-ink/70 mb-8">&copy; 2026 Akash Priyadarshi. All rights reserved. <br>FOSS under MIT License.</p>
         </div>
-        <div class="col-span-2 md:col-span-1">
+        <div class="col-span-full md:col-span-1">
             <h3 class="text-sm font-mono uppercase tracking-widest text-cinnabar font-bold mb-4">Links</h3>
             <ul class="space-y-2 font-bold uppercase text-sm">
                 <li><a href="https://github.com/AkashPriyadarshii" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -458,7 +453,7 @@
                 <li><a href="https://akashpriyadarshi.vercel.app/" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
             </ul>
         </div>
-        <div class="col-span-2 md:col-span-1">
+        <div class="col-span-full md:col-span-1">
             <h3 class="text-sm font-mono uppercase tracking-widest text-cinnabar font-bold mb-4">Social</h3>
             <ul class="space-y-2 font-bold uppercase text-sm">
                 <li><a href="https://x.com/Akash__ydv001" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
@@ -466,7 +461,7 @@
                 <li><a href="https://www.instagram.com/akash.priyadarshii/" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
         </div>
-        <div class="col-span-4 md:col-span-1 md:text-right mt-12 md:mt-0 flex flex-col justify-end">
+        <div class="col-span-full md:col-span-1 md:text-right mt-12 md:mt-0 flex flex-col justify-end">
             <p class="text-conceptual text-cinnabar leading-none">Designed by an Engineer. <br>Engineered by a Designer.</p>
         </div>
     </footer>
