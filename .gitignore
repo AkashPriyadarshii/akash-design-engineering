@@ -11,3 +11,7 @@ scripts/
 .DS_Store
 ledger.md
 *.py
+
+# Old HTML backups
+*.old
+dist/
