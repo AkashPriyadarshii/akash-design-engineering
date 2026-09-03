@@ -66,34 +66,41 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- STAGE 2: AKASH-DESIGN-ENGINEERING IMPLEMENTATION -->
+    <!-- Consume the 10-dimension token engine directly -->
+    <link rel="stylesheet" href="../packages/tokens/src/index.css">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        cinnabar: 'oklch(0.62 0.22 28.0)',
-                        ivory: 'oklch(0.97 0.01 75.0)',
-                        ink: 'oklch(0.15 0.02 260.0)'
+                        accent: 'var(--accent-primary)',
+                        surface: 'var(--neutral-50)',
+                        ink: 'var(--neutral-950)'
                     },
                     fontFamily: {
-                        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-                        serif: ['"Times New Roman"', 'Times', 'serif'],
-                        mono: ['"JetBrains Mono"', 'Consolas', 'monospace']
+                        sans: ['var(--font-sans)', 'sans-serif'],
+                        serif: ['var(--font-serif)', 'serif'],
+                        mono: ['var(--font-mono)', 'monospace']
                     }
                 }
             }
         }
     </script>
     <style>
+        /* STAGE 1: DESIGN-GENIUS SPECIFICATION (DESIGN.md) */
         :root {
-            --cinnabar: oklch(0.62 0.22 28.0);
-            --ivory: oklch(0.97 0.01 75.0);
-            --ink: oklch(0.15 0.02 260.0);
+            /* Causal Receipt: Derived from the red sealing wax and traditional iron-oxide stamps of historical Indian gazette printing */
+            --accent-primary: oklch(0.62 0.22 28.0);
+            --anchor-hue: 250; /* Harmonize grays to cool instrument slate */
         }
+        
         body {
-            background-color: var(--ivory);
-            color: var(--ink);
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--neutral-50);
+            color: var(--neutral-950);
+            font-family: var(--font-sans);
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -192,14 +199,14 @@
 <body>
 
     <!-- Header Navigation -->
-    <header class="swiss-grid py-8 border-b-2 border-ink sticky top-0 bg-ivory/90 backdrop-blur-md z-50">
+    <header class="swiss-grid py-8 border-b-2 border-ink sticky top-0 bg-surface/90 backdrop-blur-md z-50">
         <div class="col-span-full flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
             <div>
-                <h1 class="text-xs font-mono uppercase tracking-widest font-bold text-cinnabar mb-1">Official Repository</h1>
+                <h1 class="text-xs font-mono uppercase tracking-widest font-bold text-accent mb-1">Official Repository</h1>
                 <h2 class="text-2xl font-bold uppercase tracking-tight">akash-design-engineering</h2>
             </div>
             <div class="md:text-right">
-                <span class="text-xs font-mono uppercase tracking-widest text-cinnabar mb-1 block">Creator & Author</span>
+                <span class="text-xs font-mono uppercase tracking-widest text-accent mb-1 block">Creator & Author</span>
                 <p class="font-bold uppercase tracking-tight text-xl">Akash Priyadarshi</p>
             </div>
         </div>
@@ -209,7 +216,7 @@
         <!-- Hero Section -->
         <section class="swiss-grid min-h-[90dvh] content-center py-24">
             <div class="asymmetric-col-1 hero-text">
-                <h1 class="text-massive text-cinnabar font-bold mix-blend-multiply mb-8">
+                <h1 class="text-massive text-accent font-bold mix-blend-multiply mb-8">
                     Absolute <br>
                     <span class="text-ink">Discipline.</span><br>
                     Zero <br>
@@ -217,48 +224,48 @@
                 </h1>
             </div>
             <div class="asymmetric-col-2 flex flex-col justify-end hero-desc">
-                <div class="border-l-4 border-cinnabar pl-6 py-2">
+                <div class="border-l-4 border-accent pl-6 py-2">
                     <p class="text-2xl font-bold mb-4">Welcome to my site - akash-design-engineering.</p>
                     <p class="text-lg leading-relaxed text-balance mb-8">
                         This is the apex meta-skill for autonomous UI/UX orchestration. A universal software design engineering engine by Akash Priyadarshi that physically bars LLMs from hallucinating generic UI. Built on Avant-Garde Editorial Brutalism.
                     </p>
-                    <a href="https://github.com/AkashPriyadarshii/akash-design-engineering" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-cinnabar text-ivory px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-ink hover:text-ivory transition-colors group">
+                    <a href="https://github.com/AkashPriyadarshii/akash-design-engineering" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-accent text-surface px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-ink hover:text-surface transition-colors group">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
                         </svg>
                         View on GitHub
-                        <span class="block w-2 h-2 bg-ivory rounded-full group-hover:scale-150 transition-transform"></span>
+                        <span class="block w-2 h-2 bg-surface rounded-full group-hover:scale-150 transition-transform"></span>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- Manifesto Section -->
-        <section class="swiss-grid bg-ink text-ivory py-32 border-y border-cinnabar">
-            <div class="col-span-full modular-box border-cinnabar mb-16">
-                <h2 class="text-conceptual text-cinnabar">The Manifesto of Akash Priyadarshi</h2>
+        <section class="swiss-grid bg-ink text-surface py-32 border-y border-accent">
+            <div class="col-span-full modular-box border-accent mb-16">
+                <h2 class="text-conceptual text-accent">The Manifesto of Akash Priyadarshi</h2>
             </div>
             
             <div class="col-span-full md:col-span-1 border-r border-ivory/20 pr-8 gsap-reveal">
-                <h3 class="text-4xl font-bold text-ivory mb-6">01</h3>
-                <p class="text-sm uppercase tracking-widest text-cinnabar mb-4 font-mono">The Problem</p>
+                <h3 class="text-4xl font-bold text-surface mb-6">01</h3>
+                <p class="text-sm uppercase tracking-widest text-accent mb-4 font-mono">The Problem</p>
                 <p class="text-base leading-relaxed opacity-90 text-pretty">
                     Standard autonomous coding agents default to generic, homogenous, and predictable frontends. They output predictable patterns: the same hex codes, the same bouncing animations, the same tired marketing phrases. The web is drowning in an aesthetic monoculture.
                 </p>
             </div>
             
             <div class="col-span-full md:col-span-1 border-r border-ivory/20 px-0 md:px-8 gsap-reveal">
-                <h3 class="text-4xl font-bold text-ivory mb-6">02</h3>
-                <p class="text-sm uppercase tracking-widest text-cinnabar mb-4 font-mono">The Antidote</p>
+                <h3 class="text-4xl font-bold text-surface mb-6">02</h3>
+                <p class="text-sm uppercase tracking-widest text-accent mb-4 font-mono">The Antidote</p>
                 <p class="text-base leading-relaxed opacity-90 text-pretty hanging-punctuation">
                     "akash-design-engineering" is the cure. It is an advanced 4-phase orchestration pipeline that forces AI through a brutal gauntlet of mathematical constraints, OKLCH color routing, and adversarial subagent review.
                 </p>
             </div>
             
             <div class="col-span-full md:col-span-2 pl-0 md:pl-8 gsap-reveal flex flex-col justify-center">
-                <blockquote class="text-3xl font-serif italic text-cinnabar leading-snug border-l border-cinnabar pl-8">
+                <blockquote class="text-3xl font-serif italic text-accent leading-snug border-l border-accent pl-8">
                     "A digital monument rooted in ancient soil, favoring tactile stillness over digital noise. We build systems that crush predictability." <br>
-                    <span class="block mt-4 text-sm font-sans font-bold not-italic text-ivory uppercase">— Akash Priyadarshi</span>
+                    <span class="block mt-4 text-sm font-sans font-bold not-italic text-surface uppercase">— Akash Priyadarshi</span>
                 </blockquote>
             </div>
         </section>
@@ -266,12 +273,12 @@
         <!-- The 4-Phase Architecture -->
         <section class="swiss-grid py-32">
             <div class="col-span-full modular-box">
-                <h2 class="text-huge text-ink">The 4-Phase <br><span class="text-cinnabar">Architecture</span></h2>
+                <h2 class="text-huge text-ink">The 4-Phase <br><span class="text-accent">Architecture</span></h2>
             </div>
 
             <div class="asymmetric-col-4 border-r-2 border-ink pr-8 gsap-reveal">
                 <div class="mb-16">
-                    <h3 class="text-8xl font-bold text-cinnabar tabular-nums mb-4 tracking-tighter">01</h3>
+                    <h3 class="text-8xl font-bold text-accent tabular-nums mb-4 tracking-tighter">01</h3>
                     <h4 class="text-2xl font-bold uppercase mb-4">Generative Context Routing</h4>
                     <p class="text-lg leading-relaxed text-pretty">
                         Agents do not guess the aesthetic. The pipeline instantiates a stateful ledger and maps the domain to a rigid Layout Archetype (e.g., Editorial Print, Spatial Brutalism) and a Pigment Family.
@@ -284,7 +291,7 @@
                 </div>
 
                 <div>
-                    <h3 class="text-8xl font-bold text-cinnabar tabular-nums mb-4 tracking-tighter">02</h3>
+                    <h3 class="text-8xl font-bold text-accent tabular-nums mb-4 tracking-tighter">02</h3>
                     <h4 class="text-2xl font-bold uppercase mb-4">Dual-Lane Bias Breaking</h4>
                     <p class="text-lg leading-relaxed text-pretty">
                         The system dispatches two independent design planners in parallel. Lane A is seeded strictly with a Causal Anchor. Lane B remains entirely unseeded and independent.
@@ -299,7 +306,7 @@
 
             <div class="asymmetric-col-2 pl-0 md:pl-8 gsap-reveal">
                 <div class="mb-16">
-                    <h3 class="text-8xl font-bold text-cinnabar tabular-nums mb-4 tracking-tighter">03</h3>
+                    <h3 class="text-8xl font-bold text-accent tabular-nums mb-4 tracking-tighter">03</h3>
                     <h4 class="text-2xl font-bold uppercase mb-4">The Adversarial Gauntlet</h4>
                     <p class="text-lg leading-relaxed text-pretty">
                         Before a single line of code is committed to the repository, it passes through the Slop Scanner and the Source-Blind Box. This enforces physical frontend laws mathematically.
@@ -312,7 +319,7 @@
                 </div>
 
                 <div>
-                    <h3 class="text-8xl font-bold text-cinnabar tabular-nums mb-4 tracking-tighter">04</h3>
+                    <h3 class="text-8xl font-bold text-accent tabular-nums mb-4 tracking-tighter">04</h3>
                     <h4 class="text-2xl font-bold uppercase mb-4">Model Escalation Ratchet</h4>
                     <p class="text-lg leading-relaxed text-pretty">
                         Failure is managed systematically. If subagents fail the gauntlet three times, the system automatically hot-swaps to a maximum-tier inference model to brute-force a resolution.
@@ -327,7 +334,7 @@
         </section>
 
         <!-- The 5 Pillars of Design Engineering -->
-        <section class="swiss-grid bg-cinnabar text-ivory py-32">
+        <section class="swiss-grid bg-accent text-surface py-32">
             <div class="col-span-full modular-box border-ivory mb-16">
                 <h2 class="text-conceptual text-ink">The 5 Pillars of Design Engineering</h2>
                 <p class="text-xl mt-4 max-w-3xl">Extracted from the top 267 UI engineering skills, these are the immutable physical frontend laws mandated by the akash-design-engineering engine.</p>
@@ -346,9 +353,9 @@
                 <!-- Pillar 2 -->
                 <div class="gsap-reveal flex flex-col h-full border-r border-ink/30 px-0 md:px-4">
                     <span class="text-xs uppercase font-mono tracking-widest text-ink font-bold mb-4">Pillar II</span>
-                    <h3 class="text-2xl font-bold mb-4">Pigments</h3>
+                    <h3 class="text-2xl font-bold mb-4">Causal Pigments</h3>
                     <p class="text-sm opacity-90 text-pretty">
-                        OKLCH formulations dictate color generation. Anchor-chroma gray bleeds ensure cohesive neutral foundations. Complete rejection of standard industry palettes in favor of specific visual identities.
+                        OKLCH color math tied to real-world objects. The Cinnabar Red accent on this site is mathematically derived from the red sealing wax and traditional iron-oxide stamps of historical Indian gazette printing. No hallucinated default swatches.
                     </p>
                 </div>
 
@@ -384,16 +391,16 @@
         <!-- The 3 Operational Modes -->
         <section class="swiss-grid py-32">
             <div class="asymmetric-col-4 modular-box">
-                <h2 class="text-huge text-cinnabar">3 Modes</h2>
+                <h2 class="text-huge text-accent">3 Modes</h2>
                 <p class="text-conceptual text-ink mt-4">The command palette of the design-engineer skill.</p>
             </div>
 
             <div class="asymmetric-col-3 flex flex-col gap-12 mt-12 md:mt-0">
                 <!-- Mode NEW -->
-                <article class="gsap-reveal border-l-8 border-cinnabar pl-8 py-4">
+                <article class="gsap-reveal border-l-8 border-accent pl-8 py-4">
                     <div class="font-mono text-sm text-ink mb-2 px-2 py-1 bg-ink/5 inline-block">/design-engineer new</div>
                     <h3 class="text-4xl font-bold uppercase mb-4 mt-2">New Mode</h3>
-                    <h4 class="text-xl font-bold text-cinnabar mb-4">Build Fresh Bespoke Systems</h4>
+                    <h4 class="text-xl font-bold text-accent mb-4">Build Fresh Bespoke Systems</h4>
                     <p class="text-lg leading-relaxed text-pretty">
                         Scaffolds an entirely fresh, high-craft interface enforcing the 5 pillars. Applies concentric math, OKLCH pigments, analytic RK4 ODE kinetic springs, and FLIP layout engines from absolute zero.
                     </p>
@@ -410,10 +417,10 @@
                 </article>
 
                 <!-- Mode REFIT -->
-                <article class="gsap-reveal border-l-8 border-cinnabar pl-8 py-4">
+                <article class="gsap-reveal border-l-8 border-accent pl-8 py-4">
                     <div class="font-mono text-sm text-ink mb-2 px-2 py-1 bg-ink/5 inline-block">/design-engineer refit</div>
                     <h3 class="text-4xl font-bold uppercase mb-4 mt-2">Refit Mode</h3>
-                    <h4 class="text-xl font-bold text-cinnabar mb-4">Surgical Code Correction</h4>
+                    <h4 class="text-xl font-bold text-accent mb-4">Surgical Code Correction</h4>
                     <p class="text-lg leading-relaxed text-pretty">
                         Refactors existing templates into high-craft design engineering. Surgically replaces CSS defaults with specific custom cubic-beziers. Fixes concentric radii math, injects tabular-nums, and adds procedural audio micro-clicks.
                     </p>
@@ -422,16 +429,16 @@
         </section>
 
         <!-- Final Callout / About the Author -->
-        <section class="swiss-grid bg-ink text-ivory py-32 border-t border-cinnabar">
-            <div class="col-span-full border-4 border-cinnabar p-8 md:p-16 flex flex-col items-center text-center gsap-reveal">
-                <h2 class="text-sm font-mono uppercase tracking-widest text-cinnabar mb-8">About the Author & Repository</h2>
+        <section class="swiss-grid bg-ink text-surface py-32 border-t border-accent">
+            <div class="col-span-full border-4 border-accent p-8 md:p-16 flex flex-col items-center text-center gsap-reveal">
+                <h2 class="text-sm font-mono uppercase tracking-widest text-accent mb-8">About the Author & Repository</h2>
                 <h3 class="text-5xl md:text-7xl font-bold uppercase tracking-tight mb-8">Akash Priyadarshi</h3>
                 
                 <div class="max-w-4xl text-xl leading-relaxed text-pretty text-center mx-auto">
                     <p class="mb-8">
                         The <strong>akash-design-engineering</strong> repository is the culmination of rigorous analysis, brutal aesthetic philosophy, and uncompromising architectural standards. It is built for public developers who demand maximum visual impact and absolute trust in the code they deploy.
                     </p>
-                    <p class="text-cinnabar font-bold font-mono text-base">
+                    <p class="text-accent font-bold font-mono text-base">
                         NO TEMPLATES. NO EXCUSES. ONLY INTENT.
                     </p>
                 </div>
@@ -440,29 +447,29 @@
 
     </main>
 
-    <footer class="swiss-grid border-t-8 border-cinnabar pt-16 pb-24">
+    <footer class="swiss-grid border-t-8 border-accent pt-16 pb-24">
         <div class="col-span-full md:col-span-1 mb-12 md:mb-0">
             <h2 class="text-2xl font-bold uppercase mb-2">akash-design-engineering</h2>
             <p class="text-sm text-ink/70 mb-8">&copy; 2026 Akash Priyadarshi. All rights reserved. <br>FOSS under MIT License.</p>
         </div>
         <div class="col-span-full md:col-span-1">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-cinnabar font-bold mb-4">Links</h3>
+            <h3 class="text-sm font-mono uppercase tracking-widest text-accent font-bold mb-4">Links</h3>
             <ul class="space-y-2 font-bold uppercase text-sm">
-                <li><a href="https://github.com/AkashPriyadarshii" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/akash-priyadarshi-1aa51b37a" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://akashpriyadarshi.vercel.app/" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                <li><a href="https://github.com/AkashPriyadarshii" class="hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/akash-priyadarshi-1aa51b37a" class="hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://akashpriyadarshi.vercel.app/" class="hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
             </ul>
         </div>
         <div class="col-span-full md:col-span-1">
-            <h3 class="text-sm font-mono uppercase tracking-widest text-cinnabar font-bold mb-4">Social</h3>
+            <h3 class="text-sm font-mono uppercase tracking-widest text-accent font-bold mb-4">Social</h3>
             <ul class="space-y-2 font-bold uppercase text-sm">
-                <li><a href="https://x.com/Akash__ydv001" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
-                <li><a href="https://www.threads.com/@free_dev2026" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">Threads</a></li>
-                <li><a href="https://www.instagram.com/akash.priyadarshii/" class="hover:text-cinnabar transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://x.com/Akash__ydv001" class="hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+                <li><a href="https://www.threads.com/@free_dev2026" class="hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">Threads</a></li>
+                <li><a href="https://www.instagram.com/akash.priyadarshii/" class="hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
         </div>
         <div class="col-span-full md:col-span-1 md:text-right mt-12 md:mt-0 flex flex-col justify-end">
-            <p class="text-conceptual text-cinnabar leading-none">Designed by an Engineer. <br>Engineered by a Designer.</p>
+            <p class="text-conceptual text-accent leading-none">Designed by an Engineer. <br>Engineered by a Designer.</p>
         </div>
     </footer>
 
