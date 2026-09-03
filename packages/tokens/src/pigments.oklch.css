@@ -27,8 +27,8 @@
   --neutral-900: oklch(0.13 0.008 var(--anchor-hue));
   --neutral-950: oklch(0.09 0.006 var(--anchor-hue));
 
-  /* Project Accent Contract (Define in your project DESIGN.md with causal receipt) */
-  --accent-primary: oklch(0.60 0.20 20); /* Fallback only: replace with derived token */
+  /* Project Accent Contract (MANDATORY: Define in your project tokens with causal receipt) */
+  /* DO NOT supply default accent literals here. Derive per-project via DESIGN.md */
   --accent-surface: color-mix(in oklch, var(--accent-primary) 12%, var(--neutral-950));
   --accent-hover: color-mix(in oklch, var(--accent-primary) 85%, black);
 }
