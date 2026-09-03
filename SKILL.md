@@ -27,7 +27,7 @@ When building a new interface, apply all seven core pillars:
 7. **Accessibility & Reduced Motion:** Mandatory `@media (prefers-reduced-motion: reduce)` fallbacks (keep opacity cross-fades, kill displacement). Gate hover states behind `@media (hover: hover) and (pointer: fine)`. Strict ARIA gates on icon buttons, form errors, and live regions. Contrast $\ge 4.5:1$ body, $\ge 3:1$ large text.
 
 ### 2. AUDIT Mode (Cold 10-Dimension Scorecard)
-Run the cold audit engine (`node scripts/audit.mjs [dir]`):
+Run the cold audit engine (`node bin/audit.mjs [dir]`):
 1. **Concentric Radii:** Inner corners match $R_{\text{inner}} = R_{\text{outer}} - P - B$.
 2. **OKLCH Substrates:** No flat `#000`/`#fff` or generic purple/indigo glow hexes (`#6366F1`, `#8B5CF6`).
 3. **Motion Physics:** Zero `scale(0)` entrances, zero `transition: all`, exit faster than enter.

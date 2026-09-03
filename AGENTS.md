@@ -2,6 +2,11 @@
 
 Welcome, AI Agent. You are operating inside **akash-design-engineering**, authored by Akash Priyadarshi. This repository builds physical, mathematical, and sensory user interfaces that permanently bar LLM template slop.
 
+## Pipeline Architecture & Handoff
+- **Specification Layer (`design-genius`)**: Harvests intent, routes layout archetypes and pigment families, and emits a bespoke `DESIGN.md`.
+- **Implementation Layer (`akash-design-engineering`)**: Consumes `DESIGN.md` and builds tactile, production-ready code using `@design-engineer/{tokens,physics,shaders,audio,android,react}`.
+- Neither skill should duplicate the other. `design-genius` generates the design DNA; `design-engineer` executes the physics, shaders, audio, and DOM geometry.
+
 ## Mandatory Architectural Directives
 
 1. **Zero AI Slop Rule:**
@@ -30,8 +35,8 @@ Welcome, AI Agent. You are operating inside **akash-design-engineering**, author
    - `packages/android/`: Kotlin Jetpack Compose spring physics, Android 11+ HapticEngine waveforms.
    - `packages/react/`: Production React hooks (`useSpring`, `useFLIP`, `useAudioFeedback`, `useReducedMotion`).
    - `packages/encyclopedia/`: Authoritative mathematical derivations and specs for acoustics, geometry, native, optics, and physics.
-   - `scripts/audit.mjs`: Industrial 10-dimension automated CLI audit engine.
+   - `bin/audit.mjs`: Industrial 10-dimension automated CLI audit engine.
 
 4. **Verification & Audit:**
-   - Always run `node scripts/audit.mjs` before concluding tasks.
+   - Always run `node bin/audit.mjs` before concluding tasks.
    - Must achieve $\ge 85\%$ clean pass with zero emoji or buzzword violations.

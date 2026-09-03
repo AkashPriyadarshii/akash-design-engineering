@@ -1,9 +1,13 @@
 apps/
 node_modules/
+scripts/
 *.json
 !package.json
 !package-lock.json
 !tsconfig.json
+!packages/**/package.json
+!packages/**/tsconfig.json
 .env
 .DS_Store
 ledger.md
+*.py

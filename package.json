@@ -9,9 +9,9 @@
   ],
   "scripts": {
     "build": "npm run --workspaces --if-present build",
-    "audit": "node scripts/audit.mjs",
-    "audit:packages": "node scripts/audit.mjs packages",
-    "audit:website": "node scripts/audit.mjs website"
+    "audit": "node bin/audit.mjs",
+    "audit:packages": "node bin/audit.mjs packages",
+    "audit:website": "node bin/audit.mjs website"
   },
   "keywords": [
     "design-engineering",
