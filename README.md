@@ -11,6 +11,8 @@
 
 *A digital monument rooted in ancient soil, favoring tactile stillness over digital noise.*
 
+> **Pipeline Integration:** Consumes bespoke specifications from [design-genius](https://github.com/AkashPriyadarshii/design-genius). Implements production code via `@design-engineer/{tokens,physics,shaders,audio,android,react}` and audits via `bin/audit.mjs`.
+
 </div>
 
 ---
