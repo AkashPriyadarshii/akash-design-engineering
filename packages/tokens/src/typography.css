@@ -1,0 +1,58 @@
+/* c:\Users\saves\Desktop\design-engineer\packages\tokens\src\typography.css */
+
+:root {
+  /* 2+1 font family tokens */
+  --font-display: 'Oswald', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Fluid type scale using clamp() and ratios */
+  --text-xs: clamp(0.75rem, 0.71rem + 0.18vw, 0.88rem);
+  --text-sm: clamp(0.88rem, 0.82rem + 0.28vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.24vw, 1.13rem);
+  --text-lg: clamp(1.13rem, 1.05rem + 0.38vw, 1.31rem);
+  --text-xl: clamp(1.31rem, 1.16rem + 0.72vw, 1.69rem);
+  --text-2xl: clamp(1.69rem, 1.4rem + 1.4vw, 2.38rem);
+  --text-3xl: clamp(2.38rem, 1.83rem + 2.66vw, 3.69rem);
+  --text-4xl: clamp(3.69rem, 2.58rem + 5.37vw, 6.38rem);
+
+  /* Dynamic letter-spacing tokens */
+  --tracking-display: -1.4px;
+  --tracking-heading: -0.5px;
+  --tracking-body: 0;
+
+  /* All-caps display line-height constraint */
+  --leading-display: 1.05;
+  --leading-heading: 1.15;
+  --leading-body: 1.5;
+
+  /* Weight contrast rules (>=300 unit gap enforcement) */
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-black: 900;
+}
+
+/* OpenType utility classes */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+.ss01 {
+  font-feature-settings: 'ss01' 1;
+}
+
+.ss03 {
+  font-feature-settings: 'ss03' 1;
+}
+
+/* Headline length guidance and character width classes */
+.max-w-headline {
+  max-width: 50ch;
+}
+.max-w-body {
+  max-width: 65ch;
+}
+.max-w-short {
+  max-width: 40ch;
+}

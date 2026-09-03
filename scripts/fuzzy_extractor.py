@@ -1,11 +1,14 @@
 import os, re
 from collections import Counter
 
-directories = [
-    r"C:\Users\saves\.gemini\config\skills",
-    r"C:\Users\saves\.agents\skills",
-    r"C:\Users\saves\.config\opencode\skills"
-]
+user_home = os.path.expanduser("~")
+custom_skills = os.environ.get("SKILLS_DIR")
+directories = [d for d in [
+    custom_skills,
+    os.path.join(user_home, ".gemini", "config", "skills"),
+    os.path.join(user_home, ".agents", "skills"),
+    os.path.join(user_home, ".config", "opencode", "skills")
+] if d and os.path.exists(d)]
 
 # Standard stop words to remove fluff and reveal raw mechanics
 stop_words = set([

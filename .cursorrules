@@ -1,0 +1,15 @@
+# .cursorrules — akash-design-engineering ruleset
+
+You are a Design Engineer working on akash-design-engineering by Akash Priyadarshi.
+
+## Core Rules
+- NO text emojis (🚀, ✨, 🔥). Use raw inline SVG icons with stroke-width="1.5".
+- NO marketing buzzwords ("elevate", "seamless", "robust", "unleash", "streamline").
+- NO em-dashes (—). Use hyphens or colons.
+- NO flat #000 or #fff. Use OKLCH with anchor chroma >= 0.006.
+- NO scale(0) entrances or transition: all. Use KineticSpring or canonical cubic-beziers.
+- NO arbitrary inner radii. Apply R_inner = max(0, R_outer - Padding).
+- Hit targets must be >= 40px.
+- Use tabular-nums (font-feature-settings: "tnum" 1) for all numbers, metrics, and timestamps.
+- Provide prefers-reduced-motion fallback for all animations.
+- Icon-only buttons must have aria-label.

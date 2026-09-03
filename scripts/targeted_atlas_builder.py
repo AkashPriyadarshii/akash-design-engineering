@@ -1,11 +1,14 @@
 import os, re, json
 from collections import Counter
 
-directories = [
-    r"C:\Users\saves\.gemini\config\skills",
-    r"C:\Users\saves\.agents\skills",
-    r"C:\Users\saves\.config\opencode\skills"
-]
+user_home = os.path.expanduser("~")
+custom_skills = os.environ.get("SKILLS_DIR")
+directories = [d for d in [
+    custom_skills,
+    os.path.join(user_home, ".gemini", "config", "skills"),
+    os.path.join(user_home, ".agents", "skills"),
+    os.path.join(user_home, ".config", "opencode", "skills")
+] if d and os.path.exists(d)]
 
 stop_words = set(["the", "and", "to", "a", "of", "in", "is", "for", "that", "you", "it", "with", "as", "on", "this", "are", "be", "or", "an", "if", "by", "not", "use", "when", "can", "will", "your", "from", "how", "what", "all", "do", "we"])
 

@@ -1,5 +1,10 @@
+/* c:\Users\saves\Desktop\design-engineer\packages\tokens\src\index.css */
+
+@import './typography.css';
+@import './timing.css';
+@import './spacing.css';
 @import './pigments.oklch.css';
-@import './light-dark.css';
+@import './geometry.css';
 @import './anchor.css';
 @import './subgrid.css';
-@import './geometry.css';
+@import './light-dark.css';

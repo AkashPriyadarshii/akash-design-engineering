@@ -1,0 +1,43 @@
+/* c:\Users\saves\Desktop\design-engineer\packages\tokens\src\spacing.css */
+
+:root {
+  /* 4px / 8dp rhythmic spacing ladder */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Hit target tokens */
+  --hit-target-min: 40px;
+  --hit-target-touch: 44px;
+
+  /* Tinted destructive fills */
+  --destructive-tint: color-mix(in oklch, var(--pigment-oxblood, oklch(0.45 0.15 20)) 12%, transparent);
+}
+
+/* Dark mode surface ladder (+3% lightness per elevation tier in OKLCH) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-0: oklch(0.15 0.01 250);
+    --surface-1: oklch(0.18 0.01 250);
+    --surface-2: oklch(0.21 0.01 250);
+    --surface-3: oklch(0.24 0.01 250);
+    --surface-4: oklch(0.27 0.01 250);
+  }
+}
+
+/* Container strategy hierarchy classes */
+.container-hairline {
+  border: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.1));
+  border-radius: var(--radius-md, 8px);
+}
+
+.container-divided > * + * {
+  border-top: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.1));
+}

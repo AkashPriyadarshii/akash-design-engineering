@@ -1,23 +1,20 @@
 /**
- * @design-engineer/tokens - OKLCH Pigment Atelier
- * Non-slop bespoke color formulations with anchor-chroma gray bleeds (chroma >= 0.006).
+ * @design-engineer/tokens - OKLCH Pigment & Substrate Engine
+ * 
+ * NOTE: Project accent colors MUST be derived dynamically from the product's 
+ * causal DNA (e.g. physical materials, chassis finish, sensor wavelengths) per 
+ * design-genius Stage 4 lever 2. DO NOT treat swatches as a static pick-list.
+ * 
+ * This engine provides the foundational anchor-chroma neutral ladder (chroma >= 0.006)
+ * to eliminate dead gray voids, and defines the contract for project accents.
  */
 
 :root {
-  /* Bespoke Pigment Palette */
-  --pigment-verdigris: oklch(0.72 0.13 168.4);
-  --pigment-chartreuse: oklch(0.86 0.19 112.5);
-  --pigment-lapis: oklch(0.45 0.24 255.0);
-  --pigment-oxblood: oklch(0.38 0.16 18.5);
-  --pigment-aubergine: oklch(0.28 0.09 308.2);
-  --pigment-phosphor: oklch(0.88 0.26 142.2);
-  --pigment-cinnabar: oklch(0.62 0.22 28.0);
-  --pigment-signal-beam: oklch(0.93 0.08 88.5);
-
-  /* Anchor Hue for Neutrals (Default: 250 deg cool slate) */
+  /* Default Anchor Hue for Neutrals (250 deg = cool instrument slate) */
+  /* Override --anchor-hue per project to harmonize all grays with your derived accent */
   --anchor-hue: 250;
   
-  /* Harmonized Neutrals (Chroma >= 0.006 to eliminate dead grays) */
+  /* Harmonized Substrate Neutrals (Chroma >= 0.006 to eliminate dead grays) */
   --neutral-50:  oklch(0.98 0.008 var(--anchor-hue));
   --neutral-100: oklch(0.95 0.010 var(--anchor-hue));
   --neutral-200: oklch(0.88 0.012 var(--anchor-hue));
@@ -29,4 +26,9 @@
   --neutral-800: oklch(0.18 0.010 var(--anchor-hue));
   --neutral-900: oklch(0.13 0.008 var(--anchor-hue));
   --neutral-950: oklch(0.09 0.006 var(--anchor-hue));
+
+  /* Project Accent Contract (Define in your project DESIGN.md with causal receipt) */
+  --accent-primary: oklch(0.60 0.20 20); /* Fallback only: replace with derived token */
+  --accent-surface: color-mix(in oklch, var(--accent-primary) 12%, var(--neutral-950));
+  --accent-hover: color-mix(in oklch, var(--accent-primary) 85%, black);
 }

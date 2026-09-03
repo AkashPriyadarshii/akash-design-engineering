@@ -2,11 +2,14 @@ import os
 import re
 from collections import Counter
 
-paths = [
-    r"C:\Users\saves\.gemini\config\skills",
-    r"C:\Users\saves\.agents\skills",
-    r"C:\Users\saves\.config\opencode\skills"
-]
+user_home = os.path.expanduser("~")
+custom_skills = os.environ.get("SKILLS_DIR")
+paths = [d for d in [
+    custom_skills,
+    os.path.join(user_home, ".gemini", "config", "skills"),
+    os.path.join(user_home, ".agents", "skills"),
+    os.path.join(user_home, ".config", "opencode", "skills")
+] if d and os.path.exists(d)]
 
 total_skills = 0
 keywords = Counter()

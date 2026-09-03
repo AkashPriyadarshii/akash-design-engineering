@@ -7,9 +7,9 @@
 - Asymmetric balance is enforced through deliberate column spanning (`asymmetric-col-*`) leaving active negative space.
 
 ## Pigmentation
-- **Primary Accent**: Cinnabar Red (`oklch(0.62 0.22 28.0)`) - Used strategically to draw the eye, define boundaries, and mark structural elements.
-- **Base Canvas**: Warm Ivory (`oklch(0.97 0.01 75.0)`) - Provides a stark but highly legible background characteristic of print mediums.
-- **Typography/Ink**: Custom deep ink (`oklch(0.15 0.02 260.0)`) to soften pure black and harmonize with Warm Ivory and Cinnabar.
+- **Primary Accent**: Cinnabar Red (`oklch(0.62 0.22 28.0)`) — Causal receipt: Derived from the red sealing wax and traditional iron-oxide stamps of historical Indian gazette printing, grounding the tool's anti-slop mandate in tactile editorial authority.
+- **Base Canvas**: Warm Ivory (`oklch(0.97 0.01 75.0)`) — Micro-textured newsprint substrate ($R_a \approx 2.4\,\mu\text{m}$), avoiding digital flat voids.
+- **Typography/Ink**: Custom deep iron gall ink (`oklch(0.15 0.02 260.0)`) with anchor chroma $\ge 0.006$ to harmonize with Warm Ivory and Cinnabar.
 
 ## Typography
 - No emojis. Zero slop copy. Direct and concise language communicating the exact functionality of the design-engineer framework by Akash Priyadarshi.

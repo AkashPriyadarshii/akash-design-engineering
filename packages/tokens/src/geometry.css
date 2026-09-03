@@ -56,6 +56,15 @@
   transform: scale(0.97);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .tactile-press {
+    transition: none;
+  }
+  .tactile-press:active {
+    transform: none;
+  }
+}
+
 /* Tabular Numerics for Metrics and Tables */
 .tnum {
   font-variant-numeric: tabular-nums;

@@ -5,15 +5,13 @@
   "description": "Zero-dependency, high-craft software design engineering toolkit and agent skill",
   "type": "module",
   "workspaces": [
-    "packages/*",
-    "apps/*"
+    "packages/*"
   ],
   "scripts": {
     "build": "npm run --workspaces --if-present build",
-    "dev": "npm run -w apps/showcase dev",
-    "dev:pmc": "npm run -w apps/patna-municipal dev",
-    "build:pmc": "npm run -w apps/patna-municipal build",
-    "audit": "node scripts/audit.mjs"
+    "audit": "node scripts/audit.mjs",
+    "audit:packages": "node scripts/audit.mjs packages",
+    "audit:website": "node scripts/audit.mjs website"
   },
   "keywords": [
     "design-engineering",
@@ -25,7 +23,8 @@
     "anti-slop",
     "zero-dependency",
     "haptics",
-    "jetpack-compose"
+    "jetpack-compose",
+    "react-hooks"
   ],
   "author": "Akash Priyadarshi",
   "license": "MIT"

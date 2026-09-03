@@ -1,0 +1,19 @@
+{
+  "name": "@design-engineer/react",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "dependencies": {
+    "@design-engineer/physics": "workspace:*",
+    "@design-engineer/audio": "workspace:*",
+    "@design-engineer/tokens": "workspace:*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  }
+}
