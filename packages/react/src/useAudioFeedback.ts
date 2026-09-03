@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { playClick, playThud, playChime } from '@design-engineer/audio';
+import { playClick, playThud, playSuccessChime } from '@design-engineer/audio';
 
 interface AudioFeedbackOptions {
   clickOnClick?: boolean;
@@ -19,7 +19,7 @@ export function useAudioFeedback(options: AudioFeedbackOptions = { clickOnClick:
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (options.chimeOnKeyDown && e.key === 'Enter') {
-        playChime();
+        playSuccessChime();
       }
     };
 

@@ -17,7 +17,12 @@ If you want to contribute, you must abide by the brutalist, mathematics-first ph
 4. **Commit Messages:** Use conventional commits (`feat:`, `fix:`, `docs:`, `chore:`). Max 50-72 chars for the subject. No em dashes. No fluff.
 
 ## The Adversarial Gauntlet
-Before submitting a PR, run your changes against the internal `Slop Scanner`. If your PR introduces generic AI tropes, or allows the agent to bypass the OKLCH Math Gate, it will fail the CI check.
+Before submitting a PR, run your changes against the audit engine and unit test suite:
+```bash
+npm test
+node bin/audit.mjs packages
+```
+If your PR fails tests, introduces generic AI tropes, or allows an agent to bypass the OKLCH Math Gate, it will fail the CI check.
 
 ## Submitting a Pull Request
 - Keep it small and atomic.

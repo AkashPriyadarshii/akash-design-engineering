@@ -9,6 +9,14 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@design-engineer/physics": ["packages/physics/src/index.ts"],
+      "@design-engineer/audio": ["packages/audio/src/index.ts"],
+      "@design-engineer/tokens": ["packages/tokens/src/index.css"],
+      "@design-engineer/shaders": ["packages/shaders/src/index.ts"],
+      "@design-engineer/react": ["packages/react/src/index.ts"]
+    }
   }
 }

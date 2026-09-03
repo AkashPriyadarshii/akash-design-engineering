@@ -97,11 +97,30 @@ This pipeline enforces physical frontend laws extracted from the top 267 UI engi
 
 ---
 
-## 🚀 Usage & Deployment
+## 📦 Monorepo Architecture & Packages
 
-*This is an autonomous orchestration script designed for Advanced Agentic Coding environments.*
+| Package | Language | What it does |
+|---|---|---|
+| `@design-engineer/tokens` | CSS / OKLCH | Pure CSS custom properties for OKLCH neutrals, fluid typography, timing canon, 4px grid, and concentric radii. |
+| `@design-engineer/physics` | TypeScript | Zero-dependency harmonic oscillator springs (closed-form analytical + RK4 numerical) and FLIP layout engine. |
+| `@design-engineer/shaders` | GLSL / TS | Snell refraction liquid glass, Kodak film grain, Bayer dithering, and zero-setup WebGL2 `mountShader()` runner. |
+| `@design-engineer/audio` | Web Audio API | Zero-asset procedural mechanical click, thud, and metallic modal chime sound synthesizers. |
+| `@design-engineer/react` | React / TS | Tactile React hooks (`useSpring`, `useFLIP`, `useAudioFeedback`, `useReducedMotion`). |
+| `@design-engineer/android` | Kotlin | Jetpack Compose spring physics, Android 11+ `HapticEngine` waveforms, with compilable Gradle setup. |
 
-Provide the tool with a domain (e.g., *"Build a brutalist marketing site for an architecture firm"*). The orchestrator handles the ledger instantiation, context routing, color math, and adversarial validation automatically.
+---
+
+## 🧪 Verification & Testing
+
+Verify the mathematical, sensory, and anti-slop integrity of the entire codebase locally:
+
+```bash
+# Run the 10-dimension cold industrial audit
+npm run audit:packages
+
+# Run the native physics unit test suite (100% stdlib, zero-dependency)
+npm test
+```
 
 ---
 
@@ -109,7 +128,7 @@ Provide the tool with a domain (e.g., *"Build a brutalist marketing site for an 
 
 This tool runs **locally**. It does not phone home, it does not telemetry-track, and it does not harvest your project context to third-party databases. It leverages local subagent capabilities strictly within your defined workspace.
 
-**Slop Policy:** Any PRs or modifications to the `design-engineer-cookbook` that introduce generic AI tropes, emojis, or attempt to bypass the OKLCH Math Gate will be instantly rejected.
+**Slop Policy:** Any PRs or modifications to `akash-design-engineering` that introduce generic AI tropes, emojis, or attempt to bypass the OKLCH Math Gate will be instantly rejected.
 
 ---
 

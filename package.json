@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "npm run --workspaces --if-present build",
+    "test": "node --test packages/**/tests/*.test.ts",
     "audit": "node bin/audit.mjs",
     "audit:packages": "node bin/audit.mjs packages",
     "audit:website": "node bin/audit.mjs website"

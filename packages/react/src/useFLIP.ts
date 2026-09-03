@@ -1,7 +1,10 @@
 import { useLayoutEffect, useRef } from 'react';
-import { FLIPLayoutEngine } from '@design-engineer/physics/src/flip';
+import { FLIPLayoutEngine, FLIPOptions } from '@design-engineer/physics';
 
-export function useFLIP<T extends HTMLElement = HTMLElement>(deps: any[]) {
+export function useFLIP<T extends HTMLElement = HTMLElement>(
+  deps: unknown[],
+  options?: FLIPOptions
+) {
   const ref = useRef<T>(null);
   const engine = useRef<FLIPLayoutEngine | null>(null);
 
@@ -11,15 +14,14 @@ export function useFLIP<T extends HTMLElement = HTMLElement>(deps: any[]) {
 
   useLayoutEffect(() => {
     if (ref.current && engine.current) {
-      engine.current.measureBefore(ref.current);
+      engine.current.snapshot(ref.current);
     }
   }, []);
 
   useLayoutEffect(() => {
     if (ref.current && engine.current) {
-      engine.current.measureAfter(ref.current);
-      engine.current.play();
-      engine.current.measureBefore(ref.current);
+      engine.current.play(ref.current, options);
+      engine.current.snapshot(ref.current);
     }
   }, deps);
 
