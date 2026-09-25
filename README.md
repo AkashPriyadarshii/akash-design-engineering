@@ -147,3 +147,8 @@ A self-taught developer and AI-augmented systems engineer from Patna, Bihar, Ind
 
 ---
 *SEO Keywords: AI Coding Agent, UI/UX Design Engineering, Autonomous Software Generation, Subagent Driven Development, OKLCH Color Routing, Generative Design System, Akash Priyadarshi, Frontend Architecture, Anti-Slop AI, FOSS, Brutalist Web Design.*
+
+
+---
+
+**Support:** fuel the next build — [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/AkashPriyadarshi)
